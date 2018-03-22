@@ -1,2 +1,2 @@
 # BattleShip
-Wikis and Design Documents
+A 2 player turn-based strategy game 
