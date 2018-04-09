@@ -5,7 +5,6 @@
     <ProjectGuid>{A9DCAC72-BC77-4C33-BE70-BBFD31D7C798}</ProjectGuid>
     <RootNamespace>Battleships</RootNamespace>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
-    <AssemblyName>MyGame</AssemblyName>
     <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
     <SuppressXamMacMigration>True</SuppressXamMacMigration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -38,10 +37,19 @@
         <Command type="AfterClean" command="lib/cleanlib.sh" workingdir="${ProjectDir}/lib" />
       </CustomCommands>
     </CustomCommands>
+    <AssemblyName>MyGame</AssemblyName>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PrepareForRunDependsOn>$(PrepareForRunDependsOn);CopyLibsToOut</PrepareForRunDependsOn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Windows|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\AnyCPU\Debug-Windows</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>BattleShips</AssemblyName>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\" />
