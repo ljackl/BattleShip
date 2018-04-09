@@ -1,3 +1,5 @@
+using System;
+
 /// <summary>
 /// The SeaGridAdapter allows for the change in a sea grid view. Whenever a ship is
 /// presented it changes the view into a sea tile instead of a ship tile.
@@ -56,7 +58,7 @@ public class SeaGridAdapter : ISeaGrid
 	/// <summary>
 	/// Indicates that the grid has been changed
 	/// </summary>
-	public event ISeaGrid.EventHandler Changed;
+	public event EventHandler Changed;
 	
 	/// <summary>
 	/// Get the width of a tile
