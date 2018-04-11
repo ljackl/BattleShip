@@ -132,12 +132,12 @@ namespace Battleships
 					
 					draw = true;
 					
-					if (grid.Item(row, col) == TileView.Ship)
+					if (grid[row, col] == TileView.Ship)
 					{
 						draw = false;
 						//If small Then fillColor = _SMALL_SHIP Else fillColor = _LARGE_SHIP
 					}
-					else if (grid.Item(row, col) == TileView.Miss)
+					else if (grid[row, col] == TileView.Miss)
 					{
 						if (small)
 						{
@@ -148,7 +148,7 @@ namespace Battleships
 							fillColor = LARGE_MISS;
 						}
 					}
-					else if (grid.Item(row, col) == TileView.Hit)
+					else if (grid[row, col] == TileView.Hit)
 					{
 						if (small)
 						{
@@ -159,7 +159,7 @@ namespace Battleships
 							fillColor = LARGE_HIT;
 						}
 					}
-					else if ((grid.Item(row, col) == TileView.Sea) || (grid.Item(row, col) == TileView.Ship))
+					else if ((grid[row, col] == TileView.Sea) || (grid[row, col] == TileView.Ship))
 					{
 						if (small)
 						{
