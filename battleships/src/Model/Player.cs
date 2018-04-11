@@ -109,7 +109,7 @@ namespace Battleships
 				return null;
 			}
 			
-			return _Ships(name);
+			return _Ships[name];
 		}
 		
 		/// <summary>

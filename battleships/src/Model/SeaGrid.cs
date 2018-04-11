@@ -146,7 +146,7 @@ public class SeaGrid : ISeaGrid
 			int dRow = 0;
 			int dCol = 0;
 			
-			if (direction == direction.LeftRight)
+			if (direction == Direction.LeftRight)
 			{
 				dRow = 0;
 				dCol = 1;

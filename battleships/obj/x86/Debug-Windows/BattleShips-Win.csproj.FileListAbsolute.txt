@@ -1,0 +1,1 @@
+C:\Code\BattleShip\battleships\obj\x86\Debug-Windows\BattleShips-Win.csproj.CoreCompileInputs.cache
