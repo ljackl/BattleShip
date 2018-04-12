@@ -9,6 +9,11 @@ namespace Battleships
 {
 	public class GameLogic
 	{
+
+        /// <summary>
+        /// The man game loop
+        /// </summary>
+
 		public static void Main()
 		{
 			//Opens a new Graphics Window

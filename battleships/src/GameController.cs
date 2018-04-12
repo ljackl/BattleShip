@@ -129,6 +129,13 @@ namespace Battleships
 			DrawScreen();
 			SwinGame.RefreshScreen();
 		}
+
+        /// <summary>
+        /// Add the eplosion animation if it's being shown, play the sound and run the animation sequence
+        /// </summary>
+        /// <param name="row">The cell row that was hit</param>
+        /// <param name="column">The cell col that was hit</param>
+        /// <param name="showAnimation">If the animation is being played or not</param>
 		
 		private static void PlayHitSequence(int row, int column, bool showAnimation)
 		{
@@ -142,6 +149,13 @@ namespace Battleships
 			UtilityFunctions.DrawAnimationSequence();
 		}
 		
+        /// <summary>
+        /// Add the splash animation if it's being shown, play the sound and run the animation sequence
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="column"></param>
+        /// <param name="showAnimation"></param>
+
 		private static void PlayMissSequence(int row, int column, bool showAnimation)
 		{
 			if (showAnimation)

@@ -4,6 +4,10 @@
 /// <remarks></remarks>
 namespace Battleships
 {
+
+    /// <summary>
+    /// Enum for ship names
+    /// </summary>
 	public enum ShipName
 	{
 		None = 0,

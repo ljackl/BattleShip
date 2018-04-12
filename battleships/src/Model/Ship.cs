@@ -77,23 +77,37 @@ namespace Battleships
 				return _row;
 			}
 		}
-		
-		public int Column
+
+        /// <summary>
+        /// The column location of the ship
+        /// </summary>
+        /// <value>The topmost location of the ship</value>
+        /// <returns>the column of the ship</returns>
+        public int Column
 		{
 			get
 			{
 				return _col;
 			}
 		}
-		
-		public Direction Direction
+
+        /// <summary>
+        /// The orientation of the ship
+        /// </summary>
+        /// <value>updown or leftright</value>
+        /// <returns>updown or leftright</returns>
+        public Direction Direction
 		{
 			get
 			{
 				return _direction;
 			}
 		}
-		
+
+		/// <summary>
+        /// Set the ship name
+        /// </summary>
+        /// <param name="ship"></param>
 		public Ship(ShipName ship)
 		{
 			_shipName = ship;
@@ -124,6 +138,9 @@ namespace Battleships
 			_tiles.Clear();
 		}
 		
+        /// <summary>
+        /// Add a hit the number of hits take by a ship
+        /// </summary>
 		public void Hit()
 		{
 			_hitsTaken++;
@@ -141,6 +158,9 @@ namespace Battleships
 			}
 		}
 		
+        /// <summary>
+        /// Returns true if the number of hits is the same as the ship size
+        /// </summary>
 		public bool IsDestroyed
 		{
 			get

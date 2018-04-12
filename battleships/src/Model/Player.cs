@@ -86,6 +86,10 @@ namespace Battleships
 			get	{ return _playerGrid.AllDeployed; }
 		}
 		
+        /// <summary>
+        /// Returns true if all ships have been destroyed
+        /// </summary>
+
 		public bool IsDestroyed
 		{
 			get
@@ -122,6 +126,9 @@ namespace Battleships
 			get	{ return _shots; }
 		}
 		
+        /// <summary>
+        /// Returns the number of hits taken
+        /// </summary>
 		public int Hits
 		{
 			get	{ return _hits; }
@@ -137,6 +144,9 @@ namespace Battleships
 			get	{ return _misses; }
 		}
 		
+        /// <summary>
+        /// The score of the player
+        /// </summary>
 		public int Score
 		{
 			get
@@ -220,6 +230,9 @@ namespace Battleships
 			return result;
 		}
 		
+        /// <summary>
+        /// Randomly place each ship on the grid
+        /// </summary>
 		public virtual void RandomizeDeployment()
 		{
 			bool placementSuccessful = false;

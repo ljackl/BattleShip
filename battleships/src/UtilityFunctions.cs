@@ -280,11 +280,21 @@ namespace Battleships
 			SwinGame.DrawFramerate(675, 585);
 		}
 		
+        /// <summary>
+        /// Prepare a cell to explode
+        /// </summary>
+        /// <param name="row">the exploding cells row number</param>
+        /// <param name="col">the exploding cells col number</param>
 		public static void AddExplosion(int row, int col)
 		{
 			AddAnimation(row, col, "Splash");
 		}
 		
+        /// <summary>
+        /// Prepare a cell for a miss sequence
+        /// </summary>
+        /// <param name="row">the splashing cells row number</param>
+        /// <param name="col">the splashing celss col number</param>
 		public static void AddSplash(int row, int col)
 		{
 			AddAnimation(row, col, "Splash");
@@ -292,6 +302,12 @@ namespace Battleships
 		
 		private static List<Sprite> _Animations = new List<Sprite>();
 		
+        /// <summary>
+        /// Add an animation to specific cell
+        /// </summary>
+        /// <param name="row">the cell row to animate </param>
+        /// <param name="col">the cell column to animate</param>
+        /// <param name="image">PNG file of the animation</param>
 		private static void AddAnimation(int row, int col, string image)
 		{
 			Sprite s = default(Sprite);
@@ -311,6 +327,9 @@ namespace Battleships
 			_Animations.Add(s);
 		}
 		
+        /// <summary>
+        /// Update the sprites of each animation, removing them if neccessary
+        /// </summary>
 		public static void UpdateAnimations()
 		{
 			List<Sprite> ended = new List<Sprite>();
@@ -330,6 +349,9 @@ namespace Battleships
 			}
 		}
 		
+        /// <summary>
+        /// Draw the sprite for each animation
+        /// </summary>
 		public static void DrawAnimations()
 		{
 			foreach (Sprite s in _Animations)
@@ -338,6 +360,9 @@ namespace Battleships
 			}
 		}
 		
+        /// <summary>
+        /// Update the animations in the animation list
+        /// </summary>
 		public static void DrawAnimationSequence()
 		{
 			int i = 0;
