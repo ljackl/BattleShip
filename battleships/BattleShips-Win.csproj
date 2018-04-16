@@ -79,6 +79,7 @@
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\Model\BattleShipsGame.cs" />
     <Compile Include="src\Model\AIMediumPlayer.cs" />
+    <Compile Include="src\Model\AIEasyPlayer.cs" />
   </ItemGroup>
   <Target Name="CopyLibsToOut">
     <Copy SourceFiles="@(WinLibs)" DestinationFolder="$(OutDir)" />
