@@ -61,14 +61,14 @@ namespace Battleships
 		private static void LoadScores()
 		{
 			string filename = "";
-			filename = System.Convert.ToString(SwinGame.PathToResource("highscores.txt"));
+			filename = SwinGame.PathToResource("highscores.txt");
 			
 			StreamReader input = default(StreamReader);
 			input = new StreamReader(filename);
 			
 			//Read in the # of scores
 			int numScores = 0;
-			numScores = System.Convert.ToInt32(Convert.ToInt32(input.ReadLine()));
+			numScores = Convert.ToInt32(input.ReadLine());
 			
 			_Scores.Clear();
 			
@@ -82,7 +82,7 @@ namespace Battleships
 				line = input.ReadLine();
 				
 				s.Name = line.Substring(0, NAME_WIDTH);
-				s.Value = System.Convert.ToInt32(Convert.ToInt32(line.Substring(NAME_WIDTH)));
+				s.Value = Convert.ToInt32(line.Substring(NAME_WIDTH));
 				_Scores.Add(s);
 			}
 			input.Close();
@@ -101,7 +101,7 @@ namespace Battleships
 		private static void SaveScores()
 		{
 			string filename = "";
-			filename = System.Convert.ToString(SwinGame.PathToResource("highscores.txt"));
+			filename = SwinGame.PathToResource("highscores.txt");
 			
 			StreamWriter output = default(StreamWriter);
 			output = new StreamWriter(filename);
@@ -110,7 +110,7 @@ namespace Battleships
 			
 			foreach (Score s in _Scores)
 			{
-				output.WriteLine(s.Name + System.Convert.ToString(s.Value));
+				output.WriteLine(s.Name + s.Value);
 			}
 			
 			output.Close();
@@ -143,11 +143,11 @@ namespace Battleships
 				//for scores 1 - 9 use 01 - 09
 				if (i < 9)
 				{
-					SwinGame.DrawText(" " + System.Convert.ToString(i + 1) + ":   " + s.Name + "   " + System.Convert.ToString(s.Value), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+					SwinGame.DrawText(" " + (i + 1) + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				}
 				else
 				{
-					SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + System.Convert.ToString(s.Value), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+					SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				}
 			}
 		}
@@ -204,7 +204,7 @@ namespace Battleships
 					SwinGame.RefreshScreen();
 				}
 				
-				s.Name = System.Convert.ToString(SwinGame.TextReadAsASCII());
+				s.Name = SwinGame.TextReadAsASCII();
 				
 				if (s.Name.Length < 3)
 				{
@@ -214,6 +214,7 @@ namespace Battleships
 				_Scores.RemoveAt(_Scores.Count - 1);
 				_Scores.Add(s);
 				_Scores.Sort();
+                SaveScores();
 				
 				GameController.EndCurrentState();
 			}
