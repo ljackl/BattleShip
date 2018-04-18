@@ -74,7 +74,7 @@ namespace Battleships
  
 		private static void LoadMusic()
 		{
-			NewMusic("Background", "horrordrone.mp3");
+			NewMusic("Background", "background_music.ogg");
 		}
 		
 		/// <summary>
@@ -190,7 +190,7 @@ namespace Battleships
 			_LoaderFull = SwinGame.LoadBitmap(SwinGame.PathToResource("loader_full.png", ResourceKind.BitmapResource));
 			_LoaderEmpty = SwinGame.LoadBitmap(SwinGame.PathToResource("loader_empty.png", ResourceKind.BitmapResource));
 			
-			PlaySwinGameIntro();
+			//PlaySwinGameIntro();
 		}
 		
         /// <summary>
