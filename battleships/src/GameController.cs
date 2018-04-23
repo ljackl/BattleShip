@@ -188,6 +188,7 @@ namespace Battleships
 			else
 			{
 				UtilityFunctions.Message = "The AI " + result.ToString();
+				UtilityFunctions.Message = UtilityFunctions.Message.Replace ("enemy", "player");
 			}
 			
 			if (result.Value == ResultOfAttack.Destroyed)
