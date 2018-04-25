@@ -85,7 +85,11 @@ namespace Battleships
 			_theGame = new BattleShipsGame();
 			
 			//create the players
-			if (_aiSetting == AIOption.Medium)
+			if (_aiSetting == AIOption.Easy)
+			{
+				_ai = new AIEasyPlayer(_theGame);
+			}
+			else if (_aiSetting == AIOption.Medium)
 			{
 				_ai = new AIMediumPlayer(_theGame);
 			}
