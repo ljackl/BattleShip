@@ -151,14 +151,7 @@ namespace Battleships
 		{
 			get
 			{
-				if (IsDestroyed)
-				{
-					return 0;
-				}
-				else
-				{
-					return (Hits * 12) - Shots - (PlayerGrid.ShipsKilled * 20);
-				}
+                return (Hits * 12) - Shots - (PlayerGrid.ShipsKilled * 20); //losing player can enter high score if they get one 
 			}
 		}
 		
