@@ -126,10 +126,10 @@ namespace Battleships
 		/// </summary>
 		public static void DrawMainMenu()
 		{
-			//Clears the Screen to Black
-			//SwinGame.DrawText("Main Menu", Color.White, GameFont("ArialLarge"), 50, 50)
-			
-			DrawButtons(MAIN_MENU);
+            //Clears the Screen to Black
+            //SwinGame.DrawText("Main Menu", Color.White, GameFont("Square14"), 50, 50)
+
+            DrawButtons(MAIN_MENU);
 		}
 		
 		/// <summary>
@@ -137,10 +137,10 @@ namespace Battleships
 		/// </summary>
 		public static void DrawGameMenu()
 		{
-			//Clears the Screen to Black
-			//SwinGame.DrawText("Paused", Color.White, GameFont("ArialLarge"), 50, 50)
-			
-			DrawButtons(GAME_MENU);
+            //Clears the Screen to Black
+            //SwinGame.DrawText("Paused", Color.White, GameFont("Square14"), 50, 50)
+
+            DrawButtons(GAME_MENU);
 		}
 		
 		/// <summary>
@@ -151,10 +151,10 @@ namespace Battleships
 		/// </remarks>
 		public static void DrawSettings()
 		{
-			//Clears the Screen to Black
-			//SwinGame.DrawText("Settings", Color.White, GameFont("ArialLarge"), 50, 50)
-			
-			DrawButtons(MAIN_MENU);
+            //Clears the Screen to Black
+            //SwinGame.DrawText("Settings", Color.White, GameFont("Square14"), 50, 50)
+
+            DrawButtons(MAIN_MENU);
 			DrawButtons(SETUP_MENU, 1, 1);
 		}
 		
@@ -195,7 +195,7 @@ namespace Battleships
 				toDraw.Y = btnTop + TEXT_OFFSET;
 				toDraw.Width = BUTTON_WIDTH;
 				toDraw.Height = BUTTON_HEIGHT;
-				SwinGame.DrawText(_menuStructure[menu][i], MENU_COLOR, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, toDraw);
+				SwinGame.DrawText(_menuStructure[menu][i], MENU_COLOR, Color.Black, GameResources.GameFont("Square8"), FontAlignment.AlignCenter, toDraw);
 				
 				if (SwinGame.MouseDown(MouseButton.LeftButton) && IsMouseOverMenu(i, level, xOffset))
 				{

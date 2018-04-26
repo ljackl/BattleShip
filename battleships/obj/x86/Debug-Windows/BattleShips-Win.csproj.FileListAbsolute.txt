@@ -44,7 +44,6 @@ C:\Code\BattleShip\battleships\bin\Debug\Resources\images\SwinGameAni.png
 C:\Code\BattleShip\battleships\bin\Debug\Resources\panels\FileDialog.txt
 C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\error.wav
 C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\hit.wav
-C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\horrordrone.mp3
 C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\lose.wav
 C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\sink.wav
 C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\siren.wav
@@ -61,3 +60,6 @@ C:\Code\BattleShip\battleships\bin\Debug\SwinGame.dll
 C:\Code\BattleShip\battleships\obj\x86\Debug-Windows\MyGame.exe
 C:\Code\BattleShip\battleships\obj\x86\Debug-Windows\MyGame.pdb
 C:\Code\BattleShip\battleships\obj\x86\Debug-Windows\BattleShips-Win.csprojResolveAssemblyReference.cache
+C:\Code\BattleShip\battleships\bin\Debug\Resources\sounds\background_music.ogg
+C:\Code\BattleShip\battleships\bin\Debug\Resources\fonts\pirate_ship.ttf
+C:\Code\BattleShip\battleships\bin\Debug\Resources\fonts\Square.ttf

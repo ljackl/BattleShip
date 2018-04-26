@@ -251,7 +251,7 @@ namespace Battleships
 		/// </summary>
 		public static void DrawMessage()
 		{
-			SwinGame.DrawText(Message, MESSAGE_COLOR, GameResources.GameFont("Courier"), FIELD_LEFT, MESSAGE_TOP);
+			SwinGame.DrawText(Message, MESSAGE_COLOR, GameResources.GameFont("Square14"), FIELD_LEFT, MESSAGE_TOP);
 		}
 		
 		/// <summary>

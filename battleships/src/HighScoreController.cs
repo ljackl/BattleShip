@@ -130,7 +130,7 @@ namespace Battleships
 				LoadScores();
 			}
 			
-			SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
+			SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Square14"), SCORES_LEFT, SCORES_HEADING);
 			
 			//For all of the scores
 			int i = 0;
@@ -143,11 +143,11 @@ namespace Battleships
 				//for scores 1 - 9 use 01 - 09
 				if (i < 9)
 				{
-					SwinGame.DrawText(" " + System.Convert.ToString(i + 1) + ":   " + s.Name + "   " + System.Convert.ToString(s.Value), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+					SwinGame.DrawText(" " + System.Convert.ToString(i + 1) + ":   " + s.Name + "   " + System.Convert.ToString(s.Value), Color.White, GameResources.GameFont("Square14"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				}
 				else
 				{
-					SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + System.Convert.ToString(s.Value), Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
+					SwinGame.DrawText(i + 1 + ":   " + s.Name + "   " + System.Convert.ToString(s.Value), Color.White, GameResources.GameFont("Square14"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				}
 			}
 		}
@@ -189,9 +189,9 @@ namespace Battleships
 				GameController.AddNewState(GameState.ViewingHighScores);
 				
 				int x = 0;
-				x = SCORES_LEFT + SwinGame.TextWidth(GameResources.GameFont("Courier"), "Name: ");
+				x = SCORES_LEFT + SwinGame.TextWidth(GameResources.GameFont("Square14"), "Name: ");
 				
-				SwinGame.StartReadingText(Color.White, NAME_WIDTH, GameResources.GameFont("Courier"), x, ENTRY_TOP);
+				SwinGame.StartReadingText(Color.White, NAME_WIDTH, GameResources.GameFont("Square14"), x, ENTRY_TOP);
 				
 				//Read the text from the user
 				while (SwinGame.ReadingText())
@@ -200,7 +200,7 @@ namespace Battleships
 					
 					UtilityFunctions.DrawBackground();
 					DrawHighScores();
-					SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, ENTRY_TOP);
+					SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Square14"), SCORES_LEFT, ENTRY_TOP);
 					SwinGame.RefreshScreen();
 				}
 				
